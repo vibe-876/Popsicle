@@ -1,2 +1,8 @@
 * The Popsicle Programming Language
 This is my attempt at writing a Lisp in Haskell, because I am bored.
+* Dependencies
+** Non-Optional
+- Cabal
+- Parsec
+** Optional
+Nothing (yet).
