@@ -6,3 +6,9 @@ This is my attempt at writing a Lisp in Haskell, because I am bored.
 - Parsec
 ** Optional
 Nothing (yet).
+* Usage
+Compile if needed, and then call
+#+begin_src shell
+  $ popsicle path/to/file
+#+end_src
+And that's it.
