@@ -7,11 +7,11 @@ I might add more later...
 module PreProcessor where
 
 
-pp :: String -> String
-pp = remCom
+preProcess :: String -> String
+preProcess = removeComs
 
 
-remCom :: String -> String
-remCom []       = []
-remCom (';':cs) = (remCom . dropWhile (/='\n')) cs
-remCom (c:cs)   = c : remCom cs
+removeComs :: String -> String
+removeComs []       = []
+removeComs (';':cs) = (removeComs . dropWhile (/='\n')) cs
+removeComs (c:cs)   = c : removeComs cs
