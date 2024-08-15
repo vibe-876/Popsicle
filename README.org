@@ -12,3 +12,5 @@ Compile if needed, and then call
   $ popsicle path/to/file
 #+end_src
 And that's it.
+
+The recommended file extention is .pop, but popsicle doesn't check it, so do whatever you want.
