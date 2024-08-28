@@ -1,0 +1,23 @@
+:PROPERTIES:
+:header-args: :session popsicle :tangle Main.hs
+:END:
+#+title: Popsicle Main File
+#+author: Cam A.
+
+Main to me is where all of the IO functions live. This lets me keep a very clear seperating line between the public facing bit, and the internals.
+#+begin_src haskell
+  module Main where
+#+end_src
+
+We will need all of the source that we have written up to now, as well as ~System.Environment~ so that we can get the arguments passed to the program.
+#+begin_src haskell
+  import System.Environment
+  import PreProcessor
+  import Parser
+#+end_src
+
+Then, we just string together all of the main functions from each of the parts of the project, sprinkle in a few monads, and let it do its thing.
+#+begin_src haskell
+  main :: IO ()
+  main = getArgs >>= readFile . head >>= putStrLn . PreProcessor.preProcess
+#+end_src

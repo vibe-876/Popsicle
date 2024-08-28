@@ -1,6 +1,3 @@
-{-
-This file is simply all of the IO functions.
--}
 module Main where
 
 import System.Environment
