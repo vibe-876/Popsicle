@@ -1,0 +1,23 @@
+:PROPERTIES:
+:header-args: :session preprocessor :tangle PreProcessor.hs
+:END:
+#+title: Popsicle Preprocessor
+#+author: Cam A.
+
+
+The Preprocessor is rather simple. For now, all that it does is remove comments.
+#+begin_src haskell
+  module PreProcessor where
+
+
+  preProcess :: String -> String
+  preProcess = removeComs
+#+end_src
+
+To remove comments, we generate a list where each element is taken directly from the original program, until a ~;~ is encountered, at which point it drops all characters up to the newline.
+#+begin_src haskell
+  removeComs :: String -> String
+  removeComs []       = []
+  removeComs (';':cs) = (removeComs . dropWhile (/='\n')) cs
+  removeComs (c:cs)   = c : removeComs cs
+#+end_src
