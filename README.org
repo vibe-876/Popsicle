@@ -1,5 +1,9 @@
+#+title: README
+#+author: Cam A.
+
 * The Popsicle Programming Language
 This is my attempt at writing a Lisp in Haskell, because I am bored.
+It is also one of my many excuses to play with literate programming.
 * Dependencies
 ** Non-Optional
 - Cabal
