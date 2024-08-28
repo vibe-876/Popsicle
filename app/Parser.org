@@ -1,0 +1,18 @@
+:PROPERTIES:
+:header-args: :session parser :tangle Parser.hs
+:END:
+#+title: The Parser
+#+author: Cam A.
+
+We start of by declaring the module (as we always do).
+#+begin_src haskell
+  module Parser where
+#+end_src
+
+And then we import a few things. We have Parsec for -- believe it or not -- parsing! I know, I didn't expect it either. And alongside it we have just imported an infix operator that does something, so that we're not writing ~x Parsec.<?> y~, and can instead write ~x <?> y~, which we can all agree is a lot easier to read, and looks very pretty.
+#+begin_src haskell
+  import qualified Text.Parsec as Parsec
+  import Text.Parsec ((<?>))
+#+end_src
+
+Now, we start on the parser itself, which I will do later...
